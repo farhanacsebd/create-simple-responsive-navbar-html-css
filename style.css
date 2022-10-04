@@ -60,7 +60,27 @@ header{
     width: 100%;
     height: 2px;
     background-color: #D69425;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+#menu ul li:hover a::after{
     opacity: 1;
     visibility: visible;
-    transition: 0.4s ease;
+    bottom: 0;
+}
+
+@media screen and (min-width:768px) {
+    #menu ul li:last-child a{
+        color: #fff;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-radius: 30px;
+        background-image: linear-gradient(270deg,#D69425 0%,#ffBA46 100%);
+        box-sizing: 6px 6px 25px 0px rgba(214,148,37,0.28);
+    }
+    #menu ul li:last-child a::after{
+        display: none;
+    }
 }
