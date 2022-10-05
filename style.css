@@ -24,7 +24,7 @@ header{
 }
 
 .logo img{
-    max-width: 120px;
+    max-width: 100px;
     display: block;
 }
 
@@ -70,6 +70,9 @@ header{
     visibility: visible;
     bottom: 0;
 }
+#menu input,#menu label{
+    display: none;
+}
 
 @media screen and (min-width:768px) {
     #menu ul li:last-child a{
@@ -83,4 +86,29 @@ header{
     #menu ul li:last-child a::after{
         display: none;
     }
+}
+
+@media screen and (max-width:767px){
+   #menu label{
+    display: block;
+   }
+
+   #menu label::before{
+    content: "\2261";
+    font-size: 44px;
+   }
+
+   #menu ul {
+    position: absolute;
+    top: 100%;
+    background: #ffffff;
+    right: 0%;
+    left: 0%;
+    z-index: 3;
+    height: calc(100vh - 74.89px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
 }
