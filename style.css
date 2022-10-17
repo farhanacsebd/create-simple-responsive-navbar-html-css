@@ -1,129 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:wght@300;400;500;600;700&display=swap');
-
 *{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     list-style: none;
-}
-
-header{
-    background: #ffffff;
-    box-shadow: 0 10px 10px -10px rgba(35,35,38,0.1);
-}
-
-#menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding:10px 15px;
-    position: relative;
-}
-
-.logo img{
-    max-width: 100px;
-    display: block;
-}
-
-#menu ul li{
-   display: inline-block;    
-}
-#menu ul li a{
-  display: inline-block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #111111;
-  padding: 10px 0;
-  position: relative;
-  transition: 0.4s ease;
-}
-
-#menu ul li:not(:last-child) a{
-    margin-right: 18px;
-}
-
-#menu ul li:hover a{
-    color: #D69425;
-}
-
-#menu ul li a::after{
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+  }
+  nav{
+    background: #0082e6;
+    height: 80px;
     width: 100%;
-    height: 2px;
-    background-color: #D69425;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s ease;
-}
-
-#menu ul li:hover a::after{
-    opacity: 1;
-    visibility: visible;
-    bottom: 0;
-}
-#menu input,#menu label{
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
-}
-
-@media only screen and (min-width:768px) {
-    #menu ul li:last-child a{
-        color: #fff;
-        padding-left: 24px;
-        padding-right: 24px;
-        border-radius: 30px;
-        background-image: linear-gradient(270deg,#D69425 0%,#ffBA46 100%);
-        box-sizing: 6px 6px 25px 0px rgba(214,148,37,0.28);
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
     }
-    #menu ul li:last-child a::after{
-        display: none;
+    nav ul li a{
+      font-size: 16px;
     }
-}
-
-@media only screen and (max-width:767px){
-   #menu label{
-    display: block;
-   }
-
-   #menu label::before{
-    content: "\2261";
-    font-size: 44px;
-   }
-
-   #menu ul {
-        position: absolute;
-        top: 100%;
-        background: #ffffff;
-        right: 0%;
-        left: 0%;
-        z-index: 3;
-        height: calc(100vh - 89px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(0);
-        transition: 0.6s ease;
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
     }
-    #menu input:checked + label::before{
-        content: "\00d7";
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
     }
-    #menu input:checked ~ ul{
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
     }
-    #menu ul li:not(:last-child) a{
-        margin-right: 0px;
+    nav ul li a{
+      font-size: 20px;
     }
-}
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section{
+    background: url(images/bg.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
