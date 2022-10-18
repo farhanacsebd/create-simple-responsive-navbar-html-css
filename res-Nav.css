@@ -74,6 +74,19 @@ header{
     display: none;
 }
 
+
+/*** banner section css ***/
+
+.hero{
+    width: 100%;
+    height: calc(100vh - 74.89px);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/road.jpg) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 @media only screen and (min-width:768px) {
     #menu ul li:last-child a{
         color: #fff;
