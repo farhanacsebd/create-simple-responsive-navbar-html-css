@@ -209,4 +209,41 @@ header{
     #menu ul li:not(:last-child) a{
         margin-right: 0px;
     }
+
+
+/*** backguound css ***/
+
+.content .title{
+    font-size: 45px;
+}
+
+.content .heading_title{
+    font-size: 45px;
+}
+
+.content a{
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+}
+
+
+@media only screen and (max-width:480px){
+    .content .title{
+        font-size: 16px;
+    }
+    .content .heading_title{
+        font-size: 35px;
+    }
+    .content .divider{
+        max-width: 100px;
+    }
+    .content .description{
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .content a{
+        font-size: 15px;
+    }
 }
