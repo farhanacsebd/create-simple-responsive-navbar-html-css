@@ -65,19 +65,6 @@ nav ul li a{
     display: none;
 }
 
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-
-#check{
-    display: none;
-}
 
 @media (max-width: 952px){
    .logo{
